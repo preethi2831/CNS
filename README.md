@@ -1,3 +1,7 @@
+```
+NAME: Preethika N
+REG NO: 212223040130
+```
 ## EX. NO: 1 : IMPLEMENTATION OF CAESAR CIPHER
  
 
@@ -28,7 +32,49 @@ becomes C. To change a message back, each letter is replaced by the one three be
 
 
 PROGRAM :-
-
-
-
+```
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+#include <ctype.h>
+void main()
+{
+char plain[10],cipher[10];
+int key,i,length;
+int result;
+printf("\n Enter the plain text:");
+scanf("%s", plain);
+printf("\n Enter the key value:");
+scanf("%d", &key);
+printf("\n \n \t PLAIN TEXt: %s", plain);
+printf("\n \n \t ENCRYPTED TEXT:");
+3/18/25, 2:18 PM Cryptography---19CS412-classical-techqniques/README.md at main · preethi2831/Cryptography---19CS412-classical-techqniques
+https://github.com/preethi2831/Cryptography---19CS412-classical-techqniques/blob/main/README.md 1/3
+OUTPUT:
+for(i=0, length = strlen(plain); i<length; i++)
+{
+cipher[i]=plain[i] + key;
+if (isupper(plain[i]) && (cipher[i] > 'Z'))
+cipher[i] = cipher[i] - 26;
+if (islower(plain[i]) && (cipher[i] > 'z'))
+cipher[i] = cipher[i] - 26;
+printf("%c", cipher[i]);
+}
+printf("\n \n \t AFTER DECRYPTION : ");
+for(i=0;i<length;i++)
+{
+plain[i]=cipher[i]-key;
+if(isupper(cipher[i])&&(plain[i]<'A'))
+plain[i]=plain[i]+26;
+if(islower(cipher[i])&&(plain[i]<'a'))
+plain[i]=plain[i]+26;
+printf("%c",plain[i]);
+}
+getch();
+}
+```
 OUTPUT :-
+![Screenshot 2025-05-19 221013](https://github.com/user-attachments/assets/20de3ff9-26b3-4ce3-b8d4-02ce9f3c3f18)
+
+RESULT:
+The program is executed successfully
