@@ -74,7 +74,9 @@ getch();
 }
 ```
 OUTPUT :-
+
 ![Screenshot 2025-05-19 221013](https://github.com/user-attachments/assets/20de3ff9-26b3-4ce3-b8d4-02ce9f3c3f18)
+
 
 RESULT:
 The program is executed successfully
